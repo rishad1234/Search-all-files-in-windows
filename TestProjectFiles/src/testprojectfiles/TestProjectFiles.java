@@ -2,13 +2,11 @@
 package testprojectfiles;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class TestProjectFiles {
-    public static final List<String> fileDir = new ArrayList<>();
     public static void main(String[] args) {
-        File[] files = new File("E:/").listFiles();
+        File[] files = new File("C:/Users/").listFiles();
         showFiles(files);
     }
     
@@ -16,7 +14,7 @@ public class TestProjectFiles {
         for(File file : files){
             if(file.isDirectory()){
                 //System.out.println(file.toString());
-                if(file.exists())
+                if(file.exists() && file.listFiles() != null)
                     showFiles(file.listFiles());
             }else{
                 if(file.exists() && file.getName().endsWith(".mp3")){
