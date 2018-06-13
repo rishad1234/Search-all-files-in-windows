@@ -79,7 +79,8 @@ public class search {
         @Override
         public String toString()
         {
-            return "Drive{" + file + ": " + driveType + ", fileSystem=" + fileSystem + "}";
+            //return "Drive{" + file + ": " + driveType + ", fileSystem=" + fileSystem + "}";
+            return file + "";
         }
     }
 
